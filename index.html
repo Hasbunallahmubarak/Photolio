@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PHOTOLIO</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale = 1.0">
+	<link rel="stylesheet" type="text/css" href="photolio.css">
+</head>
+<body>
+	<span onclick="getNav()">&#9776;</span>
+	<div id="nav">
+		<span onclick="closeNav()">&times;</span>
+		<div>
+			<a href="#">About</a>
+			<a href="#">Photos</a>
+			<a href="#">Shop</a>
+			<a href="#">Contact</a>
+		</div>
+		
+	</div>
+	<header>
+		<h1>PHOTOLIO</h1>
+		<p>A template developed by Hmabiola, designed by w3schools for photographers.</p>
+		<a href="#" onclick="toogleG()">Toggle Grid Padding</a>
+	</header>
+	<section id="grid">
+		<div class="images">
+			<img src="images/rocks.jpg">
+			<img src="images/coffee.jpg">
+			<img src="images/woods.jpg">
+			<img src="images/rock.jpg">
+			<img src="images/nature.jpg">
+			<img src="images/mist.jpg">
+		</div>
+		<div class="images" id="middle" >
+			<img src="images/coffee.jpg">
+			<img src="images/bridge.jpg">
+			<img src="images/notebook.jpg">
+			<img src="images/london.jpg">
+			<img src="images/rocks.jpg">
+			<img src="images/avatar_g.jpg">
+		</div>
+		<div class="images">
+			<img src="images/mist.jpg">
+			<img src="images/workbench.jpg">
+			<img src="images/gondol.jpg">
+			<img src="images/skies.jpg">
+			<img src="images/lights.jpg">
+			<img src="images/workshop.jpg">
+		</div>
+	</section>
+	<footer>Developed by Hmabiola | Template design from <a href="#">W3schools</a></footer>
+	<script>
+		function getNav() {
+			document.getElementById('nav').style.display = "block";
+			document.getElementById('nav').style.height = "100%";
+		}
+		function closeNav() {
+			document.getElementById('nav').style.display = "none"
+			document.getElementById('nav').style.height = "0%";
+		}
+		function toogleG() {
+			var pad = document.getElementById('grid');
+			var paddy = document.getElementById('middle');
+			if (pad.style.padding === "0px") {
+				paddy.style.paddingLeft = "10px";
+				paddy.style.paddingRight = "10px";
+				pad.style.padding = "10px";
+			} else {
+				pad.style.padding = "0px";
+				paddy.style.paddingLeft = "0px";
+				paddy.style.paddingRight = "0px";
+			}
+		}
+	</script>
+</body>
+</html>
